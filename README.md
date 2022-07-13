@@ -1,5 +1,5 @@
-# gold-coins.jp
+# goldcoins.jp
 金貨LP
 
 ## URL
-https://www.gold-coins.jp/
+https://www.goldcoins.jp/
