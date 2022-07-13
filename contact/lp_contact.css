@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+.formcontent {
+  width: 96%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.formWrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 120%;
+  font-size: 90%;
+}
+
+table.formTable {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table.formTable td, table.formTable th {
+  border: 1px solid #ccc;
+  padding: 2rem 1rem;
+}
+
+table.formTable th {
+  width: 30%;
+  font-weight: normal;
+  background: #efefef;
+  text-align: left;
+  font-weight: bold;
+}
+
+table.formTable th .required {
+  color: #A50105;
+}
+
+.formWrap td {
+  position: relative;
+}
+
+.formWrap td input[type=email], .formWrap td input[type=text] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #cbcbcb;
+  outline: 0;
+}
+
+.formWrap td input[name="郵便番号"] {
+  width: 30%;
+}
+
+.formWrap td textarea {
+  width: 100%;
+  height: 204px;
+  padding: 1rem;
+  border: 1px solid #cbcbcb;
+  outline: 0;
+}
+
+.is-radioTrip, .is-radioDelivery {
+  display: none;
+}
+
+.error_messe {
+  color: #A50105;
+}
+
+/*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
+
+@media screen and (max-width:767px) {
+  .formWrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+  table.formTable th, table.formTable td {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+  input[type="text"], textarea {
+    width: 80%;
+    padding: 5px;
+    font-size: 110%;
+    display: block;
+  }
+  input[type="submit"], input[type="reset"], input[type="button"] {
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.privacy {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 5px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.privacy p {
+  margin-bottom: 20px;
+}
+
+.privacy .privacy_ttl {
+  font-weight: bold;
+  font-size: 110%;
+}

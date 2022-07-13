@@ -1,0 +1,684 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&display=swap'); */
+/*------------------------------------------------------------
+	デフォルトスタイル
+------------------------------------------------------------*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 1em;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+table,
+input,
+textarea,
+select,
+option {
+  font-family: "Noto Sans JP", sans-serif;
+  /* font-family: "FOT-セザンヌ Pro M", CezannePro-M, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; */
+}
+
+.serif {
+  /* font-family: 'Noto Serif JP', serif; */
+  font-family: serif;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:active {
+  color: #000;
+}
+
+/*------------------------------------------------------------
+	レイアウト
+------------------------------------------------------------*/
+body {
+  min-height: 40000px;
+  color: #231815;
+  font-size: 1.88rem;
+  line-height: 1.5;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  background-color: #fff;
+}
+
+#container {
+  overflow: hidden;
+  text-align: left;
+}
+
+#main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+
+@media all and (min-width: 897px) {
+  .sp {
+    display: none !important;
+  }
+
+  .menuBox {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 896px) {
+  body {
+    min-width: 320px;
+    font-size: 1.4rem;
+  }
+
+  body.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  a:hover,
+  a:hover img {
+    opacity: 1 !important;
+  }
+
+  .pc {
+    display: none !important;
+  }
+
+  a[href^="tel:"] {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  #main {
+    padding: 0;
+  }
+}
+
+/*------------------------------------------------------------
+	ヘッダー
+------------------------------------------------------------*/
+#gHeader {
+  background-color: #b20005;
+}
+
+#gHeader .hInner {
+  max-width: 1200px;
+  padding: 17px 20px 38px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#gHeader .lBox {
+  /* padding-left: 10px; */
+  display: flex;
+  align-items: center;
+}
+
+#gHeader .logo {
+}
+
+#gHeader .rBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#gHeader .linkBox {
+  display: flex;
+  padding-left: 27px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#gHeader .linkBox ul {
+  padding-right: 6px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 120px);
+}
+
+#gHeader .linkBox ul li {
+  width: 53px;
+  margin-right: 10px;
+}
+
+#gHeader .tel {
+  display: block;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+#gHeader .tel a {
+  padding-left: 60px;
+  display: inline-block;
+  font-size: 4.2rem;
+  color: white;
+  line-height: 1;
+  background: url("../../img/common/icon16.png") no-repeat left top 7px;
+  background-size: 53px auto;
+}
+
+#gHeader .link {
+  margin-right: 10px;
+  width: 110px;
+}
+
+#gHeader .link a {
+  padding: 10px 15px 10px 7px;
+  display: block;
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  background: #4a9137 url("../../img/common/icon15.png") no-repeat right 5px
+    center;
+  background-size: 10px auto;
+}
+
+#gHeader .link a:hover {
+  opacity: 0.7;
+}
+
+navi {
+  padding: 0 20px;
+}
+
+#gNavi {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#gNavi > li {
+  width: calc(100% / 6);
+  position: relative;
+}
+
+#gNavi > li > a {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+  border-right: 2px solid #fff;
+}
+
+#gNavi > li > a:hover {
+  opacity: 0.7;
+}
+
+#gNavi > li:last-child > a {
+  border: none;
+}
+
+#gNavi > li > a span {
+  display: block;
+  margin-top: -8px;
+}
+
+#gNavi > li .subUl {
+  display: none;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+}
+
+#gNavi > li .subUl a {
+  line-height: 1.36;
+  padding: 13px 5px;
+  display: block;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(145, 0, 0, 0.6);
+  border-bottom: 1px solid #fff;
+}
+
+#gNavi > li .subUl a:hover {
+  opacity: 0.7;
+}
+
+#gNavi > li .subUl li:last-child a {
+  border: none;
+}
+
+@media all and (max-width: 896px) {
+  #gHeader {
+    z-index: 1000;
+    position: relative;
+  }
+
+  #gHeader .hInner {
+    padding: 2vw 3vw;
+  }
+
+  #gHeader .rBox {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #gHeader .lBox {
+    display: block;
+    width: calc(237 / 750 * 100 * 1%);
+  }
+
+  #gHeader h1 {
+    display: none;
+  }
+
+  #gHeader .logo {
+    /* width: 150px; */
+    width: 100%;
+    margin: 0;
+  }
+
+  #gHeader .logo a,
+  #gHeader .logo picture,
+  #gHeader .logo picture img {
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.25s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .menu.active .top {
+    -webkit-transform: translateY(7px) translateX(0) rotate(45deg);
+    -ms-transform: translateY(7px) translateX(0) rotate(45deg);
+    transform: translateY(7px) translateX(0) rotate(45deg);
+  }
+
+  .menu.active .middle {
+    opacity: 0;
+  }
+
+  .menu.active .bottom {
+    -webkit-transform: translateY(-7px) translateX(0) rotate(-45deg);
+    -ms-transform: translateY(-7px) translateX(0) rotate(-45deg);
+    transform: translateY(-7px) translateX(0) rotate(-45deg);
+  }
+
+  .menu span {
+    background: #fff;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    cursor: pointer;
+  }
+
+  .menu span:nth-of-type(2) {
+    top: 7px;
+  }
+
+  .menu span:nth-of-type(3) {
+    top: 14px;
+  }
+
+  .menuBox {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #b20005;
+    z-index: 999;
+  }
+
+  .menuBox .naviUl {
+    border-top: 2px solid #fff;
+    margin: 25vw 0;
+  }
+
+  .menuBox .naviUl > li > a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    padding: 15px;
+    border-bottom: 2px solid #fff;
+  }
+
+  .menuBox .naviUl > .liStyle > a {
+    background: url("../../img/common/icon17.png") no-repeat right 15px center;
+    background-size: 15px auto;
+  }
+
+  .menuBox .naviUl > .liStyle > a.on {
+    background-image: url("../../img/common/icon18.png");
+  }
+
+  .menuBox .naviUl .subUl {
+    display: none;
+  }
+
+  .menuBox .naviUl .subUl a {
+    display: block;
+    color: white;
+    padding: 10px 10px 10px 30px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menuBox .naviUl .subUl li:last-child a {
+  }
+}
+
+/*------------------------------------------------------------
+	ヘッダー スマホ表示
+------------------------------------------------------------*/
+.tel_sp,
+.other_lp,
+.line_sp,
+.icon_sp,
+.tel-num_sp {
+  display: none;
+}
+
+@media all and (max-width: 896px) {
+  .hInner {
+    align-items: center;
+  }
+
+  .sp_dispbox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+    margin-right: 40px;
+    flex-wrap: wrap;
+  }
+
+  .tel_sp,
+  .other_lp,
+  .line_sp {
+    display: block;
+    width: calc(150 / 750 * 100 * 1%);
+    max-width: 60px;
+    margin-left: 1rem;
+  }
+
+  .icon_sp {
+    display: block;
+    width: 30%;
+    max-width: 80px;
+    height: auto;
+  }
+
+  .tel-num_sp {
+    display: block;
+    margin-top: 5px;
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tel-num_sp::before {
+    content: "";
+    background-image: url("./../../img/common/tel-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    vertical-align: middle;
+  }
+
+  .tel-num_sp a {
+    color: white;
+  }
+}
+
+/*------------------------------------------------------------
+	フッター
+------------------------------------------------------------*/
+#gFooter {
+  padding: 35px 0 38px;
+  color: #fff;
+  font-size: 2.11rem;
+  text-align: center;
+  background-color: #b20005;
+}
+
+#gFooter .logo {
+  margin-bottom: 15px;
+}
+
+#gFooter .txt {
+  margin: 5px 0 3px;
+  font-size: 1.98rem;
+}
+
+.pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.pageTop a:hover img {
+  opacity: 0.7;
+}
+
+@media all and (max-width: 896px) {
+  #gFooter {
+    padding-bottom: 70px;
+    font-size: 1.8rem;
+  }
+
+  #gFooter .logo img {
+    width: 260px;
+  }
+
+  #gFooter .txt {
+    margin: 5px 0 3px;
+    font-size: 1.6rem;
+  }
+
+  .pageTop {
+    width: 70px;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 897px) and (max-width: 1150px) {
+  #gNavi > li > a {
+    font-size: 1.3rem;
+  }
+
+  #gHeader .logo img {
+    display: none;
+  }
+
+  #gHeader h1 img {
+    width: 30vw;
+  }
+
+  #gHeader .logo {
+    margin-right: 10px;
+  }
+
+  #gHeader .tel {
+    font-size: 1.3rem;
+  }
+
+  #gHeader .tel a {
+    padding: 5px 0 5px 45px;
+    font-size: 2.5rem;
+    background-size: 40px auto;
+  }
+
+  #gHeader .linkBox ul li {
+    width: 40px;
+  }
+}
+
+/* コンポーネント */
+.c-img {
+  width: 100%;
+  height: auto;
+}

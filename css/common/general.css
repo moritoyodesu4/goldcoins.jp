@@ -1,0 +1,573 @@
+@charset "utf-8";
+/*------------------------------------------------------------
+	汎用スタイル
+------------------------------------------------------------*/
+
+/* clearfix */
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* flex */
+
+.flex, .flexA, .flexB, .flexC {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexA {
+  justify-content: space-around;
+}
+
+.flexB {
+  justify-content: space-between;
+}
+
+.flexC {
+  justify-content: center;
+}
+
+/*------------------------------------------------------------
+	common
+------------------------------------------------------------*/
+
+.comContact {
+  max-width: 1130px;
+  margin: 0 auto 37px;
+  padding: 25px 4.5% 30px;
+  box-sizing: border-box;
+  background-color: #f9eae1;
+}
+
+.comContact .photoBox {
+  margin-bottom: -18px;
+}
+
+.comContact h2 {
+  margin-bottom: 28px;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 900;
+  text-align: center;
+}
+
+.comContact h2 .txt01 {
+  margin-right: 30px;
+  padding: 5px 70px 13px 70px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 6.1rem;
+  background: url(../../img/common/contact_bg01.png) no-repeat left center, url(../../img/common/contact_bg02.png) no-repeat right center;
+  background-size: 35px auto, 35px auto;
+}
+
+.comContact h2 .txt01 small {
+  font-size: 4.92rem;
+}
+
+.comContact h2 .txt02 {
+  display: inline-block;
+  margin-right: 10px;
+  color: #b20005;
+  font-size: 7.5rem;
+  letter-spacing: -0.05em;
+  vertical-align: 4px;
+}
+
+.comContact h2 .txt03 {
+  display: inline-block;
+  color: #44ac35;
+  font-size: 8.43rem;
+  letter-spacing: -0.05em;
+  vertical-align: baseline;
+}
+
+.comContact .line {
+  max-width: 491px;
+}
+
+.comContact .line a {
+  padding: 0 15px 18px;
+  display: block;
+  color: #FFF;
+  font-size: 8.48rem;
+  font-weight: 900;
+  line-height: 1.2;
+  background-color: #44ac35;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.comContact .line span {
+  margin-left: 10px;
+  font-size: 5.42rem;
+  vertical-align: 5px;
+}
+
+.comContact .line small {
+  display: block;
+  color: #231815;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+}
+
+.comContact .line a:hover {
+  opacity: 0.7;
+}
+
+.comContact .comTel {
+  margin: 0 -2px;
+  position: relative;
+  z-index: 2;
+}
+
+.comTel a {
+  padding: 20px 20px 22px;
+  display: block;
+  color: #FFF;
+  text-align: center;
+  line-height: 1;
+  background-color: #b20005;
+  border-radius: 30px;
+}
+
+.comTel a:hover {
+  opacity: 0.7;
+}
+
+.comTel .num {
+  margin-bottom: 0;
+  display: block;
+  font-size: 9.2rem;
+  font-weight: 800;
+  line-height: 88px;
+  letter-spacing: 0.04em;
+}
+
+.comTel .num img {
+  margin-right: 20px;
+  vertical-align: -9px;
+}
+
+.comTel small {
+  display: block;
+  font-size: 2.43rem;
+  font-weight: 500;
+}
+
+.comTel small span {
+  margin-right: 5px;
+  font-size: 3rem;
+  font-weight: 600;
+  vertical-align: baseline;
+}
+
+@media all and (min-width: 897px) {
+  .comContact .inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .comContact .txtBox {
+    padding: 0 0 18px 0;
+    width: 52%;
+  }
+  .comContact .photoBox {
+    width: 47.5%;
+  }
+  .comContact01 .line {
+    min-width: 100%;
+  }
+  .comContact01 .photoBox {
+    margin-right: -20px;
+  }
+}
+
+@media all and (min-width: 897px) and (max-width: 1200px) {
+  .comContact {
+    padding: 25px 2% 30px;
+  }
+}
+
+@media all and (min-width: 897px) and (max-width: 1100px) {
+  .comContact h2 {
+    font-size: 5rem;
+  }
+  .comContact h2 .txt01 {
+    margin-right: 0;
+    padding: 15px 60px;
+    font-size: 5.1rem;
+  }
+  .comContact h2 .txt01 small {
+    font-size: 3.92rem;
+  }
+  .comContact h2 .txt02 {
+    font-size: 5.5rem;
+  }
+  .comContact h2 .txt03 {
+    font-size: 6.5rem;
+  }
+  .comContact .line a {
+    font-size: 7rem;
+  }
+  .comContact .line span {
+    font-size: 4.5rem;
+  }
+  .comContact .line small {
+    font-size: 2.2rem;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .comTel .num {
+    font-size: 8.2rem;
+    line-height: 88px;
+  }
+  .comTel small {
+    font-size: 2.2rem;
+  }
+}
+
+@media all and (max-width: 896px) {
+  .comContact {
+    padding: 25px 2% 30px;
+  }
+  .comContact h2 {
+    font-size: 3.5rem;
+  }
+  .comContact h2 .txt01 {
+    margin-right: 0;
+    padding: 10px 40px;
+    font-size: 4rem;
+    background-size: auto 100%;
+  }
+  .comContact h2 .txt01 small {
+    font-size: 3.5rem;
+  }
+  .comContact h2 .txt02 {
+    font-size: 5rem;
+  }
+  .comContact h2 .txt03 {
+    font-size: 5.5rem;
+  }
+  .comContact .line {
+    max-width: inherit;
+    margin-bottom: 20px;
+  }
+  .comContact .line a {
+    padding: 0 10px 18px;
+    border-radius: 10px;
+    font-size: 6rem;
+    text-align: center;
+  }
+  .comContact .line span {
+    font-size: 4rem;
+  }
+  .comContact .line small {
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .comContact .photoBox {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .comTel a {
+    border-radius: 10px;
+    padding: 15px 10px;
+  }
+  .comTel .num {
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+  .comTel .num img {
+    margin-right: 5px;
+    width: 45px;
+  }
+  .comTel small {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  .comTel small span {
+    font-size: 1.8rem;
+  }
+}
+
+@media all and (max-width: 374px) {
+  .comContact h2 {
+    font-size: 3rem;
+  }
+  .comContact h2 .txt02 {
+    font-size: 4rem;
+  }
+  .comContact h2 .txt03 {
+    font-size: 4.5rem;
+  }
+  .comContact .line a {
+    font-size: 5rem;
+  }
+  .comContact .line span {
+    font-size: 3rem;
+  }
+  .comContact .line small {
+    font-size: 1.6rem;
+  }
+  .comTel .num {
+    font-size: 3rem;
+  }
+  .comTel .num img {
+    width: 40px;
+  }
+}
+
+/* comBtn */
+
+.comBtn {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comBtn span {
+  padding: 5px 0 45px;
+  color: #848585;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 400;
+  display: inline-block;
+  background: url(../../img/common/icon07.png) no-repeat center bottom / 40px auto;
+}
+
+.on .comBtn span {
+  background-image: url(../../img/common/icon06.png)
+}
+
+.on .comBtn span {
+  color: transparent;
+}
+
+.on .comBtn span::before {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  content: 'とじる';
+  color: #848585;
+}
+
+@media all and (max-width: 896px) {
+  .comBtn {
+    position: absolute;
+    right: 5px;
+  }
+  .comBtn span {
+    padding: 0 0 22px;
+    font-size: 1.5rem;
+    background-size: 20px;
+  }
+  .on .comBtn span::before {
+    top: 3px;
+  }
+}
+
+/* comImgBox */
+
+.comImgBox {
+  margin-bottom: 15px;
+}
+
+.comImgBox h5 {
+  color: #b30005;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.comImgBox h5 span {
+  margin-right: 4px;
+  font-size: 4rem;
+  font-weight: 900;
+  vertical-align: -2px;
+}
+
+.comImgBox p {
+  color: #333;
+  font-size: 2.2rem;
+  line-height: 1.77;
+}
+
+@media all and (min-width: 897px) and (max-width: 1200px) {
+  .comImgBox h5 {
+    font-size: 2.5rem;
+  }
+  .comImgBox h5 span {
+    font-size: 3.2rem;
+  }
+  .comImgBox p {
+    font-size: 1.8rem;
+  }
+}
+
+@media all and (min-width: 897px) {
+  .comImgBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .comImgBox .textBox, .comImgBox .photoBox {
+    width: 47%;
+  }
+  .comImgBoxR {
+    flex-direction: row-reverse;
+  }
+}
+
+@media all and (max-width: 896px) {
+  .comImgBox .photoBox {
+    margin-bottom: 15px;
+  }
+  .comImgBox .photoBox img {
+    width: 100%;
+  }
+  .comImgBox h5 {
+    font-size: 1.8rem;
+  }
+  .comImgBox h5 span {
+    font-size: 2.2rem;
+  }
+  .comImgBox p {
+    font-size: 1.5rem;
+  }
+}
+
+/* comLink */
+
+.comLink {
+  margin: 30px 0 0;
+  text-align: center;
+}
+
+.comLink a {
+  padding: 11px 30px;
+  min-width: 334px;
+  display: inline-block;
+  color: #FFF;
+  font-size: 2.4rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  background-color: #b30005;
+  border-radius: 30px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.comLink a:hover {
+  opacity: 0.7;
+}
+
+@media all and (max-width: 896px) {
+  .comLink a {
+    min-width: 220px;
+    font-size: 2rem;
+  }
+}
+
+/* headLine01 */
+
+.headLine01 {
+  margin-bottom: 30px;
+  padding: 7px;
+  color: #FFF;
+  font-size: 2.58rem;
+  text-align: center;
+  background-color: #2f2725;
+}
+
+@media all and (max-width: 896px) {
+  .headLine01 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+}
+
+/* headLine02 */
+
+.headLine02 {
+  margin-bottom: 18px;
+  padding: 5px;
+  color: #FFF;
+  font-size: 3.8rem;
+  text-align: center;
+  background-color: #221714;
+}
+
+@media all and (max-width: 896px) {
+  .headLine02 {
+    font-size: 2.5rem;
+  }
+}
+
+/* headLine03 */
+
+.headLine03 {
+  margin-bottom: 27px;
+  padding: 2px;
+  color: #FFF;
+  font-size: 4rem;
+  text-align: center;
+  background-color: #9E2224;
+}
+
+@media all and (max-width: 896px) {
+  .headLine03 {
+    font-size: 2.8rem;
+  }
+}
+
+/* comTable */
+
+.comTable {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.comTable th, .comTable td {
+  padding: 35px 20px 35px 50px;
+  height: 80px;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  text-align: left;
+  vertical-align: middle;
+  font-feature-settings: "palt";
+  border: 1px solid #040000;
+}
+
+.comTable th {
+  padding-right: 5px;
+  width: 30.5%;
+  font-weight: normal;
+  background-color: #EBEBEB;
+}
+
+@media all and (max-width: 896px) {
+  .comTable th, .comTable td {
+    padding: 15px 10px;
+    height: inherit;
+    font-size: 1.4rem;
+  }
+  .comTable th {
+    width: 25%;
+    font-weight: normal;
+    background-color: #EBEBEB;
+  }
+}
+
+@media all and (max-width: 374px) {
+  .comTable th {
+    width: 29%;
+  }
+}
